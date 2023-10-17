@@ -8,7 +8,7 @@
 .header {
     display: grid;
     grid-template-rows: 1fr auto 1fr;
-    block-size: 100vh;
+    min-block-size: 0;
     justify-items: end;
     align-items: center;
     font-family: var(--font-family);
@@ -71,7 +71,6 @@
 }
 
 .header__theme-menu-button_active {
-    outline: 1px solid var(--menu-color);
     pointer-events: none;
 }
 
@@ -265,7 +264,7 @@
     }
 } 
 
-@media (375px<=width<768px) {
+@media (width<768px) {
     :root {
         --gap: 10px;
     }
